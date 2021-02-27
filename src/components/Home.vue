@@ -10,7 +10,14 @@
       <div class="banner-txt">
         <div class="banner-text">
           <h2 class="banner-title">Vun đắp nhân tài, tương lai rạng rỡ</h2>
-          <a href="utn" class="utn-banner">Ứng tuyển ngay</a>
+          <!--          <a href="utn" class="utn-banner">Ứng tuyển ngay</a>-->
+          <router-link
+              to="/job-desc"
+              tag="a"
+              class="utn-banner"
+          >
+            Ứng tuyển ngay
+          </router-link>
         </div>
       </div>
     </div>
@@ -61,8 +68,14 @@
           </div>
         </div>
         <div class="wc-link">
-          <a class="btn btn-primary" href=""
-             target="_blank">Tìm hiểu thêm về Vinschool</a>
+          <!--          <a class="btn btn-primary" href=""-->
+          <!--             target="_blank">Tìm hiểu thêm về Vinschool</a>-->
+          <router-link
+              to="/job-desc"
+              tag="a"
+              class="btn btn-primary"
+          >Tìm hiểu thêm về Vinschool
+          </router-link>
         </div>
       </div>
     </div>
@@ -123,7 +136,7 @@
                 </div>
               </div>
               <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 job-sidebar">
-                <button class="btn btn-danger utn" href="">Ứng tuyển ngay</button>
+                <button class="btn btn-danger utn" @click="backDetail">Ứng tuyển ngay</button>
               </div>
 
             </div>
@@ -135,7 +148,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    backDetail() {
+      this.$router.push('/job-desc');
+    }
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -201,10 +220,15 @@ a {
   z-index: 3;
 }
 
+.banner-main {
+  width: 100%;
+  height: 100%;
+}
+
 .color-gd {
   position: absolute;
   width: 100%;
-  height: 632px;
+  height: 100%;
   top: 0px;
   left: 0px;
   z-index: 2;
@@ -367,5 +391,11 @@ a {
 
 span.job-desc {
   margin-left: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner-main img {
+    object-fit: cover;
+  }
 }
 </style>
