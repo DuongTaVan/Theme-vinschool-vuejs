@@ -5,15 +5,29 @@ import {routes} from './routes'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faClock, faThumbtack} from '@fortawesome/free-solid-svg-icons'
+import {
+    faAngleLeft,
+    faArrowRight, faBriefcase,
+    faChevronUp,
+    faClock,
+    faMapMarkerAlt,
+    faSearch,
+} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-import {faFacebook, faGoogle, faTwitter} from '@fortawesome/free-brands-svg-icons'
+import {faFacebookF, faFacebookSquare, faGooglePlusG, faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
 
-library.add(faThumbtack)
+
+library.add(faBriefcase)
 library.add(faClock)
-library.add(faFacebook)
-library.add(faGoogle)
-library.add(faTwitter)
+library.add(faFacebookF)
+library.add(faGooglePlusG)
+library.add(faLinkedinIn)
+library.add(faMapMarkerAlt)
+library.add(faChevronUp)
+library.add(faSearch)
+library.add(faFacebookSquare)
+library.add(faArrowRight)
+library.add(faAngleLeft)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 import {BootstrapVue, IconsPlugin} from 'bootstrap-vue'
