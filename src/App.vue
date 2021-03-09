@@ -56,7 +56,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  font-family: 'Oxy Vietnam','Roboto', 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   color: #747b81;

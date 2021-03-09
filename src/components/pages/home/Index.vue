@@ -228,10 +228,6 @@
             </div>
             <div class="job-category">
               <h3 class="job-title">Loại công việc</h3>
-              <div class="search form-group">
-                <input class="form-control filler" type="text" placeholder="Lọc phòng ban... ">
-                <span class="search-icon" href=""><font-awesome-icon :icon="['fas', 'search']"/></span>
-              </div>
               <form action="">
                 <div class="list" @click="clickMe = !clickMe">
                   <input class="ip" type="hidden" v-model="clickMe"/>
@@ -294,7 +290,7 @@
                   </span></p>
 
                     <p>
-                      <font-awesome-icon :icon="['fa', 'clock']"/>
+                      <font-awesome-icon :icon="['fas', 'clock']"/>
                       <span class="job-desc">31/05/2021</span></p>
                   </div>
                 </div>
@@ -1226,12 +1222,14 @@ a {
 .job-desc a {
   color: #747b81;
 }
+.job-desc a:hover {
+  color: #205081;
+}
 
 .job-title-hd {
   margin-bottom: 20px;
   line-height: 40px;
   font-weight: normal;
-  color: #3a3f44;
   font-size: 32px;
   display: inline-block;
 }
@@ -1284,11 +1282,11 @@ a {
   border: 1px solid #be1d2c;;
 }
 
-.job-sidebar {
-  /* text-align: center; */
-  margin-top: 20px;
-}
 
+.job-sidebar p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 .job-utn {
   text-align: center;
 }
@@ -1338,6 +1336,7 @@ span.job-desc {
 
 .list {
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .search {
@@ -1359,5 +1358,8 @@ span.job-desc {
 }
 .job-category {
   margin-bottom: 20px;
+}
+.job-category form{
+  padding-left: 5px;
 }
 </style>
